@@ -1,6 +1,5 @@
 var router = require("express").Router();
 var faker = require("faker");
-const { fake } = require("faker");
 
 router.get("/data", async (req, res, next) => {
     let users = [];
