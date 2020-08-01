@@ -16,10 +16,8 @@ router.get("/data", async (req, res, next) => {
             url: faker.internet.url(),
             pic: faker.image.imageUrl(),
             avatar: faker.internet.avatar(),
-            company: `${faker.company.companyName()} - ${
-                faker.company.catchPhrase
-            }`,
-            address: `${faker.address.streetName()}, ${faker.address.city()}, ${faker.address.country()}, ZIP - ${faker.address.zipCode()}`
+            company: `${faker.company.companyName()} - ${faker.company.catchPhrase()}`,
+            address: `${faker.address.streetName()}, ${faker.address.city()}, ${faker.address.country()}, ZIP - ${faker.address.zipCode()}`,
         });
     }
 
