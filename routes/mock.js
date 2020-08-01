@@ -4,10 +4,15 @@ const { fake } = require("faker");
 
 router.get("/data", async (req, res, next) => {
     let users = [];
-    let totalItems = req.query.total || 2;
+    let totalItems = parseInt(req.query.total) || 1;
+
+    if (totalItems > 1000) {
+        totalItems = 1000;
+    }
 
     for (let i = 1; i <= totalItems; i++) {
         users.push({
+            id: i,
             name: faker.name.firstName() + " " + faker.name.lastName(),
             uname: faker.internet.userName(),
             email: faker.internet.email(),
